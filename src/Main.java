@@ -31,6 +31,17 @@ System.out.println(zm2);*/
         Zoo zoo2 = new Zoo("frigya","sousse",100);
         System.out.println(zoo2);
         zoo2.displayZoo();
+        System.out.println(zoo2.addAnimal(chat));
+        zoo2.affiche();
+        System.out.println(zoo2.searchAnimal(chat));
+        System.out.println(zoo2.addAnimal(lion));
+        System.out.println(zoo2.addAnimal(new Animal("Chat","katis",23,true)));
+        zoo2.affiche();
+
+       System.out.println(zoo2.removeAnimal(chat));
+
+System.out.println(zoo2.isZooFull());
+System.out.println(Zoo.comparerZoo(zoo2,zoo));
 
     }
 }
