@@ -1,10 +1,13 @@
-import java.util.Scanner;
+package main;
+
+import entites.Animal;
+import entites.Zoo;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-     /* ZooManagment zm = new ZooManagment();
+     /* main.ZooManagment zm = new main.ZooManagment();
         Scanner sc = new Scanner(System.in);
         System.out.println("zooName : ");
        zm.zooName = sc.nextLine();
@@ -13,19 +16,17 @@ public class Main {
         System.out.println("zooName : "+zm.zooName);
 
         System.out.println("nbrCages : "+zm.nbCages);
-        System.out.println("Zoo "+zm);
-        ZooManagment zm2 = new ZooManagment("my Zoo",80);
+        System.out.println("entites.Zoo "+zm);
+        main.ZooManagment zm2 = new main.ZooManagment("my entites.Zoo",80);
 
 System.out.println(zm2);*/
         Animal chat = new Animal();
         Animal chien = new Animal();
         Zoo zoo = new Zoo();
-       chat.name="Michou";
-       chat.age=1;
-       chat.isMammal=true;
-       chien.name="loulou";
-       chien.age=2;
-       chien.isMammal=true;
+       chat.setName("Michou");
+       chat.setAge(1);
+       chat.setMammal(true);
+
        Animal lion = new Animal("Chat","simba",15,true);
         System.out.println(lion);
         Zoo zoo2 = new Zoo("frigya","sousse",100);

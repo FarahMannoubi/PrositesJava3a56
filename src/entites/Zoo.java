@@ -1,25 +1,28 @@
+package entites;
+
 public class Zoo {
-    Animal[] animals = new Animal[2]; ;
-String name;
-String city;
-int nbrCages;
-int nbAnimals;
+    private Animal[] animals = new Animal[2]; ;
+    private String name;
+ private String city;
+private int nbrCages;
+private int nbAnimals;
 public Zoo() {
 }
     public Zoo( String name, String city, int nbrCages) {
-    this.name = name;
-    this.city = city;
+setName(name);
+this.city = city;
     this.nbrCages = nbrCages;
 
     }
     public void displayZoo(){
-    System.out.println("Zoo [ name : "+name+" city "+ city +" nbrCages : "+nbrCages+"]");
+    System.out.println("entites.Zoo [ name : "+name+" city "+ city +" nbrCages : "+nbrCages+"]");
     }
     public String toString() {
-    return "Zoo [name : "+name+" city "+" city : ]";
+    return "entites.Zoo [name : "+name+" city "+" city : ]";
     }
 
     public boolean addAnimal(Animal animal){
+        if (isZooFull()) return false;
         if (searchAnimal(animal) != -1) return false;
         if ( animals.length <= nbAnimals ) return false;
         for (int i = 0; i < animals.length; i++){
@@ -40,7 +43,7 @@ public Zoo() {
  }
  public int searchAnimal(Animal animal){
     for (int i = 0; i < animals.length; i++){
-        if (animals[i]!=null && animal.name.equals(animals[i].name)){
+        if (animals[i]!=null && animal.getName().equals(animals[i].getName())){
             return i;
         };
     }
@@ -72,4 +75,48 @@ public static Zoo comparerZoo(Zoo z1, Zoo z2){
    return z2;
 }
 
+
+    public Animal[] getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+    if (name==null){
+        System.out.println("name is null");
+        return;
+    }
+        this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public int getNbrCages() {
+        return nbrCages;
+    }
+
+    public void setNbrCages(int nbrCages) {
+        this.nbrCages = nbrCages;
+    }
+
+    public int getNbAnimals() {
+        return nbAnimals;
+    }
+
+    public void setNbAnimals(int nbAnimals) {
+        this.nbAnimals = nbAnimals;
+    }
 }
