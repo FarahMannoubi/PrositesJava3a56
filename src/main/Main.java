@@ -1,7 +1,6 @@
 package main;
 
-import entites.Animal;
-import entites.Zoo;
+import entites.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -43,6 +42,19 @@ System.out.println(zm2);*/
 
 System.out.println(zoo2.isZooFull());
 System.out.println(Zoo.comparerZoo(zoo2,zoo));
+        Aquatic aquatic = new Aquatic();
+        Terrestrial terrestrial = new Terrestrial("Chien","karim",2,true,4);
+        Dolphin dolphin = new Dolphin("Dolphin","Dofdof",2,true,"habita ",7);
+        Penguin penguin = new Penguin("penguin","dahdouh",2,false,"",3);
+        System.out.println("aquatic");
 
+        System.out.println(aquatic);
+        System.out.println(terrestrial);
+        System.out.println(dolphin);
+        System.out.println(penguin);
+        aquatic.swim();
+dolphin.swim();
+dolphin.swim(23);
+penguin.swim();
     }
 }
